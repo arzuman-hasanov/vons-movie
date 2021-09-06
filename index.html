@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voneseh</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="image/favicon.jpg">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    </head>
+<body>
+<div class="container">
+<nav>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="menu">
+            <div class="item"><a href="#"><i class="fas fa-film"></i>Films</a></div>
+            <div class="item"><a href="#"><i class="fas fa-desktop"></i>Movies</a></div>
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-bars"></i>Categories<i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item">👑 Legends</a>
+                    <a href="#" class="sub-item">❤️ Romance</a>
+                    <a href="#" class="sub-item">☠️ War</a>
+                    <a href="#" class="sub-item">🕵️ Detective</a>
+                    <a href="#" class="sub-item">⭐ Animation</a>
+                    <a href="#" class="sub-item">👻 Horror</a>
+                    <a href="#" class="sub-item">🎭 Comedy</a>
+                    <a href="#" class="sub-item">❓ Mystery</a>
+                    <a href="#" class="sub-item">🔥 Action</a>
+                    <a href="#" class="sub-item">😢 Drama</a>
+                    <a href="#" class="sub-item">💡 Science Fiction</a>
+                    <a href="#" class="sub-item">🏝️ Adventure</a>
+                    <a href="#" class="sub-item">📜 Historical</a>
+                    <a href="#" class="sub-item">😊 Rom-coms</a>
+                </div>
+            </div>
+            <div class="item"><a href="#" onclick="openLogin()"><i class="fas fa-user"></i>Login</a></div>
+            <div class="item"><a href="#" onclick="openSignUp()"><i class="fas fa-user-plus"></i>Sign Up</a></div>
+            <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About Us</a></div>
+        </div>
+    </div>
+            
+    <a href="#" id="logo">Voneseh</a>
+    <div id="main-menu">
+        <ul>
+            <li><a href="#">Films</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Categories</a>
+                <div id="sub-menu">
+                    <ul>
+                        <a href="#"><li>👑 Legends</li></a>
+                        <a href="#"><li>❤️ Romance</li></a>
+                        <a href="#"><li>☠️ War</li></a>
+                        <a href="#"><li>🕵️ Detective</li></a>
+                        <a href="#"><li>⭐ Animation</li></a>
+                        <a href="#"><li>👻 Horror</li></a>
+                        <a href="#"><li>💀 Crime</li></a>
+                        <a href="#"><li>🎭 Comedy</li></a>
+                        <a href="#"><li>❓ Mystery</li></a>
+                        <a href="#"><li>🔥 Action</li></a>
+                        <a href="#"><li>😢 Drama</li></a>
+                        <a href="#"><li>🧠 Science Fiction</li></a>
+                        <a href="#"><li>🏝️ Adventure</li></a>
+                        <a href="#"><li>📜 Historical</li></a>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="registration">
+        <ul>
+            <li>
+                <input type="text" placeholder="Search"><i class="fa fa-search"></i>
+            </li>
+            <li><a"><i class="fa fa-user"></i></a>
+            <div id="users">
+                <ul>
+                    <li onclick="openLogin()"><i class="fas fa-sign-in-alt"></i> Login</li>
+                    <li onclick="openSignUp()"><i class="fas fa-user-plus"></i> Sign Up</li>
+                </ul>
+            </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="login-container">
+    <div id="login-page">
+        <div id="wrapper">
+            <div id="title"><span>Login</span><i class="fas fa-times" onclick="closeLogin()"></i></div>
+            <form>
+                <div id="row">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div id="row">
+                    <input type="password" placeholder="Password" required><br>
+                </div>
+                <div id="row">
+                    <button  id="button">Login</button>
+                </div>
+                <div id="signup-link">Not a member? <a onclick="openSignUp()" href="#">Signup now</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="signup-container">
+    <div id="signup-page">
+        <div id="wrapper">
+            <div id="title"><span>Sign Up</span><i class="fas fa-times" onclick="closeSignUp()"></i></div>
+            <form>
+                <div id="row">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div id="row">
+                    <input type="email" placeholder="Email" required><br>
+                </div>
+                <div id="row">
+                    <input type="password" placeholder="Password" required><br>
+                </div>
+                <div id="row">
+                    <button  id="button">Sign Up</button>
+                </div>
+                <div id="login-link">Have an account? <a onclick="openLogin()" href="#">Login</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="main-container">
+        <div class="main-text">
+            <h1>Love Is A Dagger !</h1>
+            <p>You Can Trust One Thing. I Love To Be Right.</p>
+            <p>We May Lose. Sometimes Painfully. But We Don't Die. We Survive.</p>
+            <p>I Don't Wanna Hurt You. I Don't Want A Throne. I Just...I Just Want You To Be Okay.</p>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/vonesehh/"  target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <img src="image/harlyquin.jpg" alt="header-image">
+    </div>
+</main>
+
+<div id="sidebar">
+    <div class="sidebar-menu">
+        <ul>
+            <p>LEGENDS</p>
+            <li><a href="#">Game of Thrones</li></a>
+            <li><a href="#">Sherlock</li></a>
+            <li><a href="#">La Case De Papel</li></a>
+            <li><a href="#">Vikings</a></li>
+            <li><a href="#">Breaking Bad</li></a>
+            <li><a href="#">Stranger Things</li></a>
+            <li><a href="#">Magicians</a></li>
+            <li><a href="#">The Walking Dead</li></a>
+            <li><a href="#">The 100</a></li>
+            <li><a href="#">Prison Break</li></a>
+            <li><a href="#">The Queen's Gambit</a></li>
+            <li><a href="#">HIMYM</li></a>
+            <li><a href="#">Rick and Morty</a></li>
+            <li><a href="#">Peaky Blinders</a></li>
+            <li><a href="#">Friends</li></a>
+            <li><a href="#">Lucifer</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="content1">
+    <div class="pop-post">
+        <img src="image/witcher.jpg" alt="pop-1">
+    </div>
+</div>
+
+<div id="content2">
+    <div class="pop-post">
+        <img src="image/the.jpg" alt="pop-2">
+    </div>
+</div>
+
+<div id="content3">
+    <div class="pop-post">
+        <img src="image/pop-3.webp" alt="pop-3">
+    </div>
+</div>
+
+<div id="main-content">
+    <div class="category">
+        <ul>
+            <li id="category_all" style="color: yellow"><i class="fas fa-crown"></i></li>
+            <li id="category_films">Films</li>
+            <li id="category_movies">Movies</li>
+            <li id="category_recently">Recently</li>
+        </ul>
+    </div>
+    <div class="posts"></div>
+
+</div>
+
+<div id="section">
+    <ul>
+        <p>Menu</p>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Request List</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <p>Viewers</p>
+        <li><a> Jamie</a></li>
+        <li><a> Jessica</a></li>
+        <li><a> Lila</a></li>
+        <li><a> Adrian</a></li>
+        <li><a> Con</a></li>
+        <li><a> Isabella</a></li>
+        <li><a> Oliver</a></li>
+    </ul>
+</div>
+
+
+<footer>
+            <div id="footer-content">
+                <div id="description">
+                <p> You know what kind of plan never fails? No plan. No plan at all. You know why? Because life cannot be planned !</p>
+                <span>Parasite - 2019</span>
+                </div>
+        
+                <button id="scrollUp"><i class="fas fa-arrow-up"></i></button>
+                
+            </div>
+            <hr>
+            <p id="p">Voneseh &copy; 2021 - All Rights Reserved | <a href="mailto:voneseh.contact@gmail.com">voneseh.contact@gmail.com</a></p>
+</footer>
+
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/callback.js"></script>
+</body>
+</html>
