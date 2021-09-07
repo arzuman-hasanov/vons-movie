@@ -46,7 +46,7 @@ nav
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 40px;
+    padding: 3px 40px;
     background: rgba(255,255,255,1);
     font-family: 'Libre Baskerville', serif;
     border-bottom: 2px solid darkred;
@@ -117,7 +117,8 @@ nav #registration ul li input:focus
 {
     border: 1px solid #000;
 }
-nav #registration i
+nav #registration .fa-search,
+nav #registration .fa-user
 {
     transition: .5s ease;
     font-size: 17px;
@@ -154,12 +155,13 @@ nav #registration .fa-search
     cursor: pointer;
     padding: 10px 5px;
     list-style: none;
+    transition: .6s ease;
 }
 #users ul li:not(:last-child)
 {
     border-bottom: 1px solid #888;
 }
-#users ul li:hover:not(#users i)
+#users ul li:hover
 {
     color: orange;
 }
@@ -959,7 +961,7 @@ footer
     grid-area: footer;
     box-sizing: border-box;
     width: 100%;
-    background: url("../image/wallpapertip_harley-quinn-wallpaper-hd_93610.jpg");
+    background: url("../image/footer.jpg");
     background-position: top;
     color: #fff;
     border-top: 1px solid #333;
@@ -997,10 +999,11 @@ footer .fa-arrow-up
     font-size: 15px;
     background: #fff;
     color: #000;
-    margin: 12px 12px 0 -3px;
+    margin: 12px 12px 0 0px;
     padding-top: 10px;
     cursor: pointer;
     transition: .4s ease;
+    outline: 0;
 }
 footer .fa-arrow-up:hover
 {
@@ -1010,6 +1013,7 @@ footer #scrollUp
 {
     background: transparent;
     border: none;
+    text-align: center;
 }
 footer p
 {
@@ -1073,10 +1077,10 @@ footer hr {
     .main-container .main-text p{
         font-size: 14px;
     }
-    footer #description
+    /* footer #description
     {
         margin-left: -10px;
-    }
+    } */
 }
 
 @media only screen and (max-width:550px){
