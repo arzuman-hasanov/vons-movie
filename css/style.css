@@ -954,6 +954,119 @@ main .main-container /*  */
 }
 /* - - x - - x - - x - -  x - - x - - x - x - - x - - x - -  Section - - x - - x - - x - -  x - - x - - x - x - - x - - x - -  */
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Request List  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.requestList-container
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+}
+.requestList-page
+{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+    box-sizing: border-box;
+}
+.requestList-page .wrapper
+{
+    width: 100%;
+    background: #000;
+    border-radius: 18px;
+}
+.requestList-page .wrapper #title
+{
+    line-height: 80px;
+    background: #000;
+    text-align: center;
+    border-radius: 18px 18px 0 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    font-family: 'Source Sans Pro';
+}
+
+.requestList-page .wrapper #title i
+{
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    cursor: pointer;
+}
+.requestList-page .wrapper #title i:hover
+{
+    color: #666;
+}
+.requestList-page .wrapper form
+{
+    padding: 10px 25px 40px 25px;
+}
+.requestList-page .wrapper form #row{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.requestList-page .wrapper form input
+{
+    background: #000;
+    color: #fff;
+    border: 2px solid #3D84B8;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    margin-left: 7%;
+    outline: none;
+    transition: all 0.7s ease;
+}
+.requestList-page .wrapper form input:focus
+{
+    border-color: #1EAE98;
+    transition: 0.25s;
+}
+.requestList-page .wrapper form #smtp-btn
+{
+    width: 50%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid #1EAE98;
+    background: #000;
+    color: #fff;
+    margin-left: 25%;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+.requestList-page .wrapper form #smtp-btn:hover
+{
+    background: #1EAE98;
+    color: #fff;
+}
+.requestList-page .wrapper form textarea
+{
+    width: 77.5%;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    outline: none;
+    border: 2px solid #3D84B8;
+    border-radius: 20px;
+    resize: none;
+    margin: 0 0 20px 7%;
+}
+.requestList-page .wrapper form textarea:focus
+{
+    border-color: #1EAE98;
+    transition: 0.25s;
+}
+/* - - x - - x - - x - -  x - - x - - x - x - - x - - x - -  Request List - - x - - x - - x - -  x - - x - - x - x - - x - - x - -  */
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Footer  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 footer

@@ -50,6 +50,47 @@ let loginPage,signUpPage;
     });
 /* -- x - Dropdpwn Menu opener - x -- */
 
+/* - Request List opener - */
+
+    $(document).ready(function(){
+        requestListOpen = () =>{
+            $(".requestList-container").fadeIn();
+            window.addEventListener("scroll",noScroll);
+        }
+        requestListClose = () =>{
+            $(".requestList-container").fadeOut();
+            window.removeEventListener("scroll",noScroll);
+        }
+
+    })
+
+/* -- x - Request List opener - x -- */
+
+/* - SMTP (send to Email) - */
+
+const smtp_btn = document.querySelector("#smtp-btn");
+const inputs = document.querySelector("#smtp-form");
+smtp_btn.addEventListener("click",function(){
+    if(inputs.elements["name"].value != "" && 
+    inputs.elements["email"].value != "" &&
+    inputs.elements["message"].value != ""){
+
+    Email.send({
+        Host:"smtp.mailtrap.io",
+        Username: "3554c3579d264c",
+        Password: "b91ae925542db4",
+        To: "hasanovarzuman7@gmail.com",
+        From: inputs.elements["email"].value,
+        Subject: "Contact Us Query by the Customer",
+        Body: inputs.elements["name"].value+ "<br>" + inputs.elements["email"].value + "<br>" + inputs.elements["message"].value
+        
+    })
+    alert("Completed")
+}
+})
+
+/* -- x - SMTP (send to Email)- x -- */
+
 /* - Category  - */
 
 let category_all = document.querySelector("#category_all");
