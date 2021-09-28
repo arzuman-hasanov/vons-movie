@@ -51,6 +51,13 @@ nav
     font-family: 'Libre Baskerville', serif;
     border-bottom: 2px solid darkred;
 }
+.show
+{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+}
 nav #icon
 {
     display: none;
@@ -76,7 +83,7 @@ nav ul
 {
     display: flex;
 }
-nav ul li:not(#users ul li,#sub-menu ul li)
+nav ul li:not(.users ul li,#sub-menu ul li)
 {
     list-style: none;
     padding: 10px 15px 5px 15px;
@@ -87,7 +94,7 @@ nav #main-menu ul li:hover:not(#sub-menu li)
 {
     margin: 0 2px 0 2px;
 }
-nav ul li i:hover:not(#users i),
+nav ul li i:hover:not(.users i),
 nav ul li a:hover:not(#sub-menu a)
 {
     color: #f00;
@@ -132,17 +139,18 @@ nav #registration .fa-search
 }
 
 /* - User Registration - */
-#users
+
+.users
 {
     color: #fff;
     font-size: 14px;
     position: absolute;
-    top: 13%;
     right: 1%;
+    margin-top: 40px;
     z-index: 12;
     display: none;
 }
-#users ul
+.users ul
 {
     width: 120px;
     background: #000;
@@ -150,22 +158,22 @@ nav #registration .fa-search
     border-radius: 10px;
     border: 1px solid #888;
 }
-#users ul li
+.users ul li
 {
     cursor: pointer;
     padding: 10px 5px;
     list-style: none;
     transition: .6s ease;
 }
-#users ul li:not(:last-child)
+.users ul li:not(:last-child)
 {
     border-bottom: 1px solid #888;
 }
-#users ul li:hover
+.users ul li:hover
 {
     color: orange;
 }
-#users ul li i
+.users ul li i
 {
     margin: 0 7px 0 10px;
     font-size: 15px;
@@ -1173,6 +1181,13 @@ footer hr {
     "content1 content2 content3"
     "main-content main-content main-content"
     "footer footer footer";
+    }
+    nav{
+        padding: 8px 40px;
+    }
+    .show
+    {
+        height: 45px;
     }
     nav .menu-btn{
         display: flex;

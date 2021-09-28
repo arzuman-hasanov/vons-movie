@@ -5,7 +5,7 @@ let loginPage,signUpPage;
         signUpPage=document.querySelector("#signup-container");
 
         $(".fa-user").on("click",function(){
-            $("#users").toggle("#users");
+            $(".users").toggle(".users");
         })
 
         function openLogin(){
@@ -140,3 +140,27 @@ scrollUp.addEventListener("click",function(){
 });
 
 /* - x - Scroll Up - x - */
+
+
+/* - Fixed Nav  - */
+
+const navBar = document.querySelector('nav')
+const navHeight = navBar.getBoundingClientRect().height
+window.addEventListener("scroll",() => {
+    const scrollHeight = window.pageYOffset
+    if(scrollHeight > navHeight){
+        navBar.classList.add("show")
+    }else{
+        navBar.classList.remove("show")
+    }
+})
+
+/* - x - Fixed Nav - x - */
+
+
+
+/* - GSAP  - */
+
+// gsap.from('.main-text',{opacity: 0,duration: 1.5, delay: .5, y: 10});
+
+/* - x - GSAP - x - */
